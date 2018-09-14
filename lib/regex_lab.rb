@@ -1,5 +1,9 @@
 def starts_with_a_vowel?(word)
-puts  word.scan(/^[aeoui]/) == []
+  if word.match (/^[aeiouAEIOU]/)
+   true
+ else
+   false
+   end
 end
 
 def words_starting_with_un_and_ending_with_ing(text)
@@ -11,10 +15,17 @@ def words_five_letters_long(text)
 end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
-  text.match (/^[A-Z].+\W$/)
+  if text.match (/^[A-Z].+\W$/)
+  true
+else
+  false
+  end
 end
 
 def valid_phone_number?(phone)
-  phone.match (/.?\d{3}.?\d{3}.?\d{4}\b/)
+  if phone.match (/.?\d{3}.?\d{3}.?\d{4}\b/)
+    true
+  else
+    false
+  end
 end
-starts_with_a_vowel?(foot)
